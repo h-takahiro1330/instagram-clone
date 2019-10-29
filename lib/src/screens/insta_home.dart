@@ -19,9 +19,9 @@ class _InstahomeState extends State<Instahome> {
   Widget bottomNavBar() {
     final List<BottomNavigationBarItem> items = [
       BottomNavigationBarItem(
-        title: Text('favorite'),
+        title: Text('home'),
         icon: Icon(
-          Icons.favorite,
+          Icons.home,
           color: Colors.pink,
         )
       ),
@@ -29,6 +29,27 @@ class _InstahomeState extends State<Instahome> {
         title: Text('serach'),
         icon: Icon(
           Icons.search,
+          color: Colors.pink,
+        )
+      ),
+      BottomNavigationBarItem(
+        title: Text('add'),
+        icon: Icon(
+          Icons.add,
+          color: Colors.pink,
+        )
+      ),
+      BottomNavigationBarItem(
+        title: Text('favorite'),
+        icon: Icon(
+          Icons.favorite,
+          color: Colors.pink,
+        )
+      ),
+      BottomNavigationBarItem(
+        title: Text('profile'),
+        icon: Icon(
+          Icons.person,
           color: Colors.pink,
         )
       )
@@ -42,6 +63,9 @@ class _InstahomeState extends State<Instahome> {
       },
       currentIndex: currentIndex,
       iconSize: 24.0,
+      unselectedItemColor: Colors.black,
+      selectedItemColor: Colors.pink,
+      type: BottomNavigationBarType.fixed,
     );
   }
 }
