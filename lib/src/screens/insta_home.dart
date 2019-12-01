@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/src/widgets/insta_activities.dart';
 import 'package:instagram_clone/src/screens/insta_search.dart';
+import 'package:instagram_clone/src/screens/insta_gallery.dart';
+import 'package:instagram_clone/src/screens/insta_favourite.dart';
 
 class Instahome extends StatefulWidget {
   _InstahomeState createState() => _InstahomeState();
@@ -12,14 +14,16 @@ class _InstahomeState extends State<Instahome> {
 
   List<Widget> _widgetOptions = <Widget> [
     InstaActivities(),
-    InstaSearch()
+    InstaSearch(),
+    InstaGallery(),
+    InstaFavourite()
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: _widgetOptions[currentIndex > 0 ?  1 : 0],
+      body: _widgetOptions[currentIndex > 2 ?  3 : currentIndex],
       bottomNavigationBar: bottomNavBar(),
     );
   }
